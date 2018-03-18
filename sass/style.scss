@@ -1,0 +1,346 @@
+/*
+Theme Name: Avcon
+Theme URI: your link
+Author: the WordPress team
+Author URI: https://wordpress.org/
+Description: Our 2015 default theme is clean, blog-focused, and designed for clarity. Twenty Fifteen's simple, straightforward typography is readable on a wide variety of screen sizes, and suitable for multiple languages. We designed it using a mobile-first approach, meaning your content takes center-stage, regardless of whether your visitors arrive by smartphone, tablet, laptop, or desktop computer.
+Version: 1.9
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: blog, two-columns, left-sidebar, accessibility-ready, custom-background, custom-colors, custom-header, custom-logo, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+Text Domain: twentyfifteen
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+
+@import "bootstrap/bootstrap";
+
+// variables
+@import "variables/variables";
+
+// All 
+
+body{
+
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 20px;
+	color:#95989a;
+
+}
+
+h1{
+
+	font-weight: bold;
+}
+
+
+h1, h2, h3, h4, h5{
+
+	line-height: 120%;
+
+}
+
+.main{
+
+		padding:70px 0px;
+
+
+	h2{
+		color:$brand-color;
+		font-size:22px;
+		margin-bottom: 27px;
+	}
+}
+
+
+.linkedin-link{
+	// background: #fff;
+	display: inline-block;
+	padding-top: 30px;
+	// width: 60px;
+	// height: 60px;
+	// width: 50px;
+	// height: 50px;
+	// border-radius:10px;
+	// line-height: 50px;
+	// text-align: center;
+	// margin-top: -400px;
+
+	.fa{
+
+		color:#fff;
+		background: #108ed3;
+		width: 36px;
+		height: 36px;
+		border-radius:3px;
+		line-height: 36px;
+		text-align: center;
+		font-size:22px;
+	}
+	
+}
+.brand-color{
+	color:$brand-color;
+}
+
+a, .btn{
+	&:hover, &:active, &:focus{
+		text-decoration:none;
+		outline: none;
+		box-shadow:none;
+
+		&.btn-outline-light{
+			border-radius:none;
+			border:2px colid #fff;;
+		}
+	}
+}
+a, .btn, .form-control {
+	transition: all .3s;
+	cursor:pointer;
+}
+
+// Overwrite Bootstrap
+
+.btn-brand{
+
+	background: $brand-color;
+	border:none;
+	border-radius:0;
+	color:#fff;
+	text-transform:uppercase;
+	height: 60px;
+	line-height:60px;
+	padding: 0px 50px;
+
+	&:hover{
+		background: darken($brand-color, 10%);
+		color:#fff;
+	}
+}
+
+
+.btn-outline{
+
+	padding: 15px 20px;
+	border:2px solid #fff;
+	background: transparent;
+	font-size: 22px;
+	color:#fff;
+
+	&:hover{
+
+		background: #fff;
+		color:#000;
+	}
+
+}
+
+.main-header{
+	background: #fff;
+	overflow:hidden;	
+	border-bottom:3px solid #7c92c5;
+
+}
+
+.bottom-text-fixed{
+	position: absolute;
+	bottom:0;
+	left:0;
+}
+// Header
+.main-navigation{
+
+	padding:30px 0px;
+	display: block;
+	width: 100%;
+
+
+
+	.logo{
+
+		float:left;
+	}
+
+	.contact-info{
+		clear:both;
+	}
+
+	ul.main-menu{
+
+		display: inline-block;
+		list-style:none;
+		margin-top: 23px;
+		// float:right;
+
+		li{
+
+			display: inline-block;
+			margin-right: 50px;
+
+			&:last-child{
+				margin-right: 0;
+			}
+
+			a{
+
+				color:$nav-links-color;
+				font-size:$nav-links-size;
+				text-transform: uppercase;
+				position:relative;
+
+				&:before{
+					position:absolute;
+					bottom:-5px;
+					width: 0%;
+					height: 5px;
+					background: $brand-color;
+					content:"";
+					-webkit-transition: width 2s;
+					transition: width .3s;
+
+				}
+
+				&:hover{
+					&:before{
+					
+						width: 100%;
+
+
+					}
+				}
+
+			}
+
+			&.active-link{
+				a{
+					border-bottom:5px solid $brand-color;
+				}
+			}
+
+		}
+	}
+}
+
+.site-icon{
+
+	background: #66add4;
+	color:#fff;
+	 width: 38px;
+	height: 38px;
+	line-height: 38px;
+	text-align: center;
+	border-radius:3px;
+	font-size:24px;
+
+	&:hover{
+		background: darken(#66add4, 5%);
+	}
+}
+
+.linkedin-link-top{
+	position: absolute;
+	right:0;
+	bottom:-80px;
+	background: #fff;
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	width: 50px;
+	height: 50px;
+	border-radius:10px;
+	line-height: 50px;
+	text-align: center;
+	margin-top: -400px;
+
+	.fa{
+
+		color:#fff;
+		background: #108ed3;
+		width: 36px;
+		height: 36px;
+		border-radius:3px;
+		line-height: 36px;
+		text-align: center;
+		font-size:22px;
+	}
+	
+}
+
+.text-bottom-absolute{
+	position:absolute;
+	left:0;
+	top:-90px;
+	color:#fff;
+	z-index: 2;
+}
+
+.cta{
+	margin: 70px 0px;
+}
+.text-sm{
+
+	color:#afafaf;
+	font-size: 18px;
+}
+
+// Banner Hompage
+.slider-homepage{
+	min-height: 960px;
+	background-image: url(img/header.png);
+	background-size: cover;
+	background-position: center center;
+
+}
+
+.relative{
+	position: relative;
+}
+
+.bottom-text{
+	margin-top: 680px;
+}
+
+// content
+.member{
+	
+	padding-top: 100px;
+}
+
+// footer
+.main-footer{
+	background: $light-gray;
+	overflow:hidden;
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+
+	img{
+		margin-bottom: 15px;
+	}
+}
+.footer-block{
+	padding-top: 25px;
+}
+
+.copyright{
+
+	font-size:16px;
+}
+
+.footer-menu{
+	list-style:none;
+	li{
+		display: block;
+		a{
+			color:#95989a;
+
+			&:hover{
+				color:$brand-color;
+			}
+		}
+	}
+}
+//Responsive4
