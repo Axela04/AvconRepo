@@ -288,11 +288,11 @@ a, .btn, .form-control {
 
 // Banner Hompage
 .slider-homepage{
+	
 	min-height: 960px;
 	background-image: url(img/header.png);
 	background-size: cover;
 	background-position: center center;
-
 }
 
 .relative{
@@ -342,5 +342,53 @@ a, .btn, .form-control {
 			}
 		}
 	}
+}
+
+
+// Projects
+
+
+.button-area{
+
+
+	.button {
+
+		display: inline-block;
+		padding: 10px;
+		margin: 30px 5px;
+		background-color: rgba(255, 255, 255, 0.2);
+		border-radius: 3px;
+		cursor: pointer;
+		transition: all .3s ease;
+
+		&::hover {
+
+			background-color: rgba(255, 255, 255, 0.32);
+		}
+
+		&.active {
+			background-color: rgba(255, 255, 255, 0.52);
+			box-shadow: 0 0 8px rgba(0, 0, 0, 0.6) inset;
+		}
+	}
+
+	input[type=checkbox] {
+	  display: none !important;
+	}
+
+} 
+
+
+img{
+
+	width: 100%;
+	height: auto;
+}
+
+
+.post{
+    padding: 2.5px;
+    background: #555;
+    color:#fff;
 }
 //Responsive4

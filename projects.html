@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Avcon</title>
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/masonry/3.1.5/masonry.pkgd.min.js"></script>
+    <script src="https://cdn.rawgit.com/digistate/resouces/master/multipleFilterMasonry.js"></script>
+    <script>
+
+
+
+// Load is used to ensure all images have been loaded, impossible with document
+
+jQuery(window).load(function () {
+
+    // Takes the gutter width from the bottom margin of .post
+    var container = jQuery('#posts');
+    // Creates an instance of Masonry on #posts
+    container.masonry({
+        // gutter: gutter,
+        itemSelector: '.post',
+        columnWidth: '.post',
+        filtersGroupSelector:".filters"
+
+    });
+
+// After the page is loaded
+ $params = {
+      itemSelector: ".post",
+      filtersGroupSelector:".filters"
+    // Uncomment below to set the selectorType to use <ul> instead of inputs
+    // selectorType: "list"
+    };
+
+$loadingMessage = $("#loading_msg");
+$filterButton = $(".button");
+
+  // Do mansonry with filtering
+  container.multipleFilterMasonry($params);
+  // Show articles with fadein
+  container.find(".post").animate({
+      "opacity":1
+    }, 1200);
+  // Hide loading message
+  $loadingMessage.fadeOut();
+
+  // Change the filtering button(label) status
+  $filterButton.find("input").change(function(){
+    $(this).parent().toggleClass("active");
+  });
+
+});
+
+
+
+
+
+
+
+
+    </script>
+
+</head>
+<body>
+<!-- Header -->
+<header class="main-header ">
+	<div class="container">
+		<nav class="main-navigation">
+			<a href="index.html" class="logo"><img src="img/logo.png" alt="Avcon"></a>
+			<div class="float-right relative">
+				<ul class="main-menu">
+					<li class="active-link"><a href="">Projects</a></li>
+					<li><a href="leadership.html">Leadership</a></li>
+					<li><a href="">Expertise</a></li>
+					<li><a href="">About</a></li>
+					<li><a href="">Contact</a></li>
+				</ul>
+				<div class="text-right text-sm">
+					646.572.0488 | INFO@AVCON-ENG.COM | NEW YORK, NY
+				</div>
+			</div>
+		</nav>
+	</div>
+</header>
+
+<div class="clearfix"></div>
+
+<div class="linkedin-bar">
+	<div class="container text-light relative">
+		<a class="linkedin-link-top" href="#"><i class="fa fa-linkedin"></i></a>
+	</div>
+</div>
+
+<main class="main">
+<div class="container" id="grid">
+
+        <div class="button-area filters">
+        <label class="button">
+        <input type="checkbox" value="group1" />Group 1
+        </label>
+        <label class="button">
+        <input type="checkbox" value="group2" />Group 2
+        </label>
+        <label class="button">
+        <input type="checkbox" value="group3" />Group 3
+        </label>
+        <label class="button">
+        <input type="checkbox" value="group4" />Group 4
+        </label>
+        </div>
+        <div id="posts" class="row">
+            <div class="post col-md-4 group2">
+                <img src="http://placehold.it/408x243"><br>
+                <br>
+                <strong>Title Goes Here</strong><br>
+                <small>Category</small>
+            </div>
+            <div class="post col-md-4 group2">
+                <img src="http://placehold.it/408x493"><br>
+                <br>
+                <strong>Title Goes Here</strong><br>
+                <small>Category</small>
+            </div>
+            <div class="post col-md-4 group1">
+                <img src="http://placehold.it/408x243"><br>
+                <br>
+                <strong>Title Goes Here</strong><br>
+                <small>Category</small>
+            </div>
+            <div class="post col-md-4 group2">
+                <img src="http://placehold.it/408x493"><br>
+                <br>
+                <strong>Title Goes Here</strong><br>
+                <small>Category</small>
+            </div>
+            <div class="post col-md-4 group3">
+                <img src="http://placehold.it/408x493"><br>
+                <br>
+                <strong>Title Goes Here</strong><br>
+                <small>Category</small>
+            </div>
+            <div class="post col-md-4 group4">
+                <img src="http://placehold.it/408x243"><br>
+                <br>
+                <strong>Title Goes Here</strong><br>
+                <small>Category</small>
+            </div>
+            <div class="post col-md-4 group2">
+                <img src="http://placehold.it/408x493"><br>
+                <br>
+                <strong>Title Goes Here</strong><br>
+                <small>Category</small>
+            </div>
+            <div class="post col-md-4 group2">
+                <img src="http://placehold.it/408x243"><br>
+                <br>
+                <strong>Title Goes Here</strong><br>
+                <small>Category</small>
+            </div>
+            <div class="post col-md-4 group1">
+                <img src="http://placehold.it/408x493"><br>
+                <br>
+                <strong>Title Goes Here</strong><br>
+                <small>Category</small>
+            </div>
+            <div class="post col-md-4 group1">
+                <img src="http://placehold.it/408x243"><br>
+                <br>
+                <strong>Title Goes Here</strong><br>
+                <small>Category</small>
+            </div>
+            <div class="post col-md-4 group1">
+                <img src="http://placehold.it/408x493"><br>
+                <br>
+                <strong>Title Goes Here</strong><br>
+                <small>Category</small>
+            </div>
+        </div>
+        <div id="loading_msg">Loading...</div>
+    </div>
+</main>
+<!-- Footer -->
+<footer class="main-footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				<div class="footer-block">
+					<img src="img/logo-sm.png" alt="">
+					<p> Avcon Engineering is a full service
+						engineering firm specializing in
+						mechanical, electrical, plumbing, fire
+						protection and fire alarm design. For
+						over 30 years we have delivered creative
+						and robust engineering designs for your
+						construction needs. We encourage
+						creative thinking from within our firm to
+						provide our clients with designs best
+						suited for their specific application.
+					</p>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="footer-block">
+					<ul class="footer-menu">
+						<li><a href="">Projects</a></li>
+						<li><a href="">Leadership</a></li>
+						<li><a href="">Expertise</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="footer-block">
+					<ul class="footer-menu">
+						<li><a href="">About</a></li>
+						<li><a href="">Careers</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="footer-block">
+					<p>
+						Avcon Engineering PC
+						580 8th Avenue, 14th Fl
+						New York, NY 10018 <br><br>
+						t: 646-572-0488
+						info@avcon-eng.com
+					</p>
+					<a href="#"><i class="fa fa-linkedin site-icon"></i></a>
+				</div>
+			</div>
+		</div>
+		<p class="copyright text-center">2017 © Avcon Engineering PC. All rights reserved. </p>
+	</div>
+</footer>
+
+<!-- Footer -->
+</body>
+</html>

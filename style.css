@@ -5762,4 +5762,29 @@ a, .btn, .form-control {
       .footer-menu li a:hover {
         color: #bf5629; }
 
+.button-area .button {
+  display: inline-block;
+  padding: 10px;
+  margin: 30px 5px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all .3s ease; }
+  .button-area .button::hover {
+    background-color: rgba(255, 255, 255, 0.32); }
+  .button-area .button.active {
+    background-color: rgba(255, 255, 255, 0.52);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6) inset; }
+.button-area input[type=checkbox] {
+  display: none !important; }
+
+img {
+  width: 100%;
+  height: auto; }
+
+.post {
+  padding: 2.5px;
+  background: #555;
+  color: #fff; }
+
 /*# sourceMappingURL=style.css.map */
