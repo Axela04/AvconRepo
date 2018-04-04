@@ -5762,6 +5762,53 @@ a, .btn, .form-control {
       .footer-menu li a:hover {
         color: #bf5629; }
 
+img {
+  max-width: 100%;
+  height: auto; }
+
+/**** Isotope CSS3 transitions ****/
+/* End: Recommended Isotope styles */
+/* 2 columns wide */
+/* highlight col-* */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+/* ---- grid-item ---- */
+.grid-sizer,
+.grid-item {
+  width: 33.33333333333333%; }
+
+.grid-item {
+  height: auto;
+  overflow: hidden;
+  float: left;
+  background: #D26;
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+  -webkit-transition-property: height, width;
+  -moz-transition-property: height, width;
+  transition-property: height, width;
+  -webkit-transition-property: -webkit-transform, opacity;
+  -moz-transition-property: -moz-transform, opacity;
+  transition-property: transform, opacity;
+  /**** disabling Isotope CSS3 transitions ****/
+  -webkit-transition-duration: 0s;
+  -moz-transition-duration: 0s;
+  transition-duration: 0s;
+  padding: 3px; }
+
+.grid-item--width2 {
+  width: 50%; }
+
+.grid-item--width3 {
+  width: 66.66666666666667%; }
+
+.grid-item--height2 {
+  height: 480px; }
+
 .button-area .button {
   display: inline-block;
   padding: 10px;
@@ -5770,21 +5817,15 @@ a, .btn, .form-control {
   border-radius: 3px;
   cursor: pointer;
   transition: all .3s ease; }
-  .button-area .button::hover {
-    background-color: rgba(255, 255, 255, 0.32); }
-  .button-area .button.active {
-    background-color: rgba(255, 255, 255, 0.52);
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6) inset; }
+
+.button-area .button:hover {
+  background-color: rgba(255, 255, 255, 0.32); }
+
+.button-area .button.active {
+  background-color: rgba(255, 255, 255, 0.52);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6) inset; }
+
 .button-area input[type=checkbox] {
-  display: none !important; }
-
-img {
-  width: 100%;
-  height: auto; }
-
-.post {
-  padding: 2.5px;
-  background: #555;
-  color: #fff; }
+  display: none; }
 
 /*# sourceMappingURL=style.css.map */

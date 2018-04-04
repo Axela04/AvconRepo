@@ -348,47 +348,212 @@ a, .btn, .form-control {
 // Projects
 
 
-.button-area{
-
-
-	.button {
-
-		display: inline-block;
-		padding: 10px;
-		margin: 30px 5px;
-		background-color: rgba(255, 255, 255, 0.2);
-		border-radius: 3px;
-		cursor: pointer;
-		transition: all .3s ease;
-
-		&::hover {
-
-			background-color: rgba(255, 255, 255, 0.32);
-		}
-
-		&.active {
-			background-color: rgba(255, 255, 255, 0.52);
-			box-shadow: 0 0 8px rgba(0, 0, 0, 0.6) inset;
-		}
-	}
-
-	input[type=checkbox] {
-	  display: none !important;
-	}
-
-} 
 
 
 img{
 
-	width: 100%;
+	max-width: 100%;
 	height: auto;
 }
 
 
-.post{
-    padding: 2.5px;
-    background: #555;
-    color:#fff;
+
+
+// .grid-isotope{
+
+// 	display: grid;
+// 	grid-template-columns: repeat(auto-fill, minmax(410px, 1fr));
+// 	grid-gap: 10px;
+// 	grid-auto-rows: minmax(120px, auto);
+// 	grid-auto-flow: dense;
+// 	padding: 10px;
+
+// 	.grid-item{
+// 		// margin: 0;
+// 		padding: 1rem;
+
+
+// 		&.grid-item--width3{
+
+// 		width: 66.666%;
+// 		}
+
+// 		// &.grid-item--width2{
+// 		// width: 33.333%;
+
+
+// 		// }
+
+// 		.grid-item--content{
+
+// 		position: absolute;
+// 		left:0;
+// 		bottom:0;
+// 		width: 100%;
+// 		background: rgba(191,86,39,.4);
+// 		padding: 9px 10px;
+// 		z-index: 2;
+
+
+// 		h2{
+// 		font-style: 18px;
+// 		margin: 0;
+// 		margin-bottom: 13px;
+// 		color:#fff;
+// 		line-height: 100%;
+// 		text-transform: uppercase;
+// 		}
+
+// 		.grid-itemcontent{
+
+// 		font-size: 14px;
+// 		line-height: 100%;
+// 		margin: 0;
+// 		color:#fff;
+// 		}
+
+// 		}
+
+
+
+// 	}
+
+// 	.span-2 {
+// 	grid-column-end: span 4;
+// 	grid-row-end: span 4;
+// 	}
+
+// 	.span-3 {
+// 	grid-column-end: span 3;
+// 	grid-row-end: span 1;
+// 	}
+// }
+
+
+
+// .item.next {
+//   width: 60px;
+//   height: 60px;
+//   border: 5px solid black;
+//   border-radius: 35px;
+// }
+
+
+// .isotope-hidden.isotope-item {
+//   pointer-events: none;
+//   z-index: 1;
+// }
+
+/**** Isotope CSS3 transitions ****/
+
+
+
+
+/* End: Recommended Isotope styles */
+// ff nightly or chrome with flags enabled
+// https://www.youtube.com/watch?v=Dz9BzY21Zks&list=PLQkVA6z3dFvbnBJetfYDAF3-cG_ubgdZR 
+// http://gridbyexample.com/
+// Rachel Andrew F.T.W
+/* 2 columns wide */
+
+
+
+// .item {
+// 	width: 33.33333333333333%;
+// 	float:left;
+
+//   -webkit-transition-duration: 0.8s;
+//      -moz-transition-duration: 0.8s;
+//           transition-duration: 0.8s;
+//   -webkit-transition-property: height, width;
+//      -moz-transition-property: height, width;
+//           transition-property: height, width;
+//   -webkit-transition-property: -webkit-transform, opacity;
+//      -moz-transition-property:    -moz-transform, opacity;
+//           transition-property:         transform, opacity;
+// /**** disabling Isotope CSS3 transitions ****/
+//   -webkit-transition-duration: 0s;
+//      -moz-transition-duration: 0s;
+//           transition-duration: 0s;
+
+//           &.item--width2 { width: 66.66666666666667%; }
+
+// }
+
+ /* highlight col-* */
+ // .row [class*='col-'] {
+ //  background-clip: content-box;
+ //  // margin-bottom: 5px;
+ //  }
+
+//  .tall {
+//   height: 160px;
+// }
+// .taller {
+//   height: 200px;
+// }
+
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
 }
-//Responsive4
+
+/* ---- grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+ width: 33.33333333333333%;
+}
+
+.grid-item {
+  height: auto;
+  overflow:hidden;
+  float: left;
+  background: #D26;
+
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+          transition-property: height, width;
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+          transition-property:         transform, opacity;
+/**** disabling Isotope CSS3 transitions ****/
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+          transition-duration: 0s;
+
+
+  
+  // margin-bottom: 3px;
+  padding: 3px;
+  // padding-bottom: 3;
+}
+
+.grid-item--width2 { width:  50%; }
+.grid-item--width3 { width: 66.66666666666667%; }
+
+.grid-item--height2 { height: 480px; }
+
+.button-area .button {
+  display: inline-block;
+  padding: 10px;
+  margin: 30px 5px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+.button-area .button:hover {
+  background-color: rgba(255, 255, 255, 0.32);
+}
+.button-area .button.active {
+  background-color: rgba(255, 255, 255, 0.52);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6) inset;
+}
+.button-area input[type=checkbox] {
+  display: none;
+}

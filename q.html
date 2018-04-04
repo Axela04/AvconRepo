@@ -1,0 +1,203 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Masonry Template</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<style>
+/* Default tags and Bootstrap classes */
+/**/
+
+img{
+
+    width: 100%;
+    height:auto;
+}
+
+.post{
+    padding: 2.5px;
+    background: #555;
+    color:#fff;
+}
+
+
+body a:hover {
+  color: #aaa;
+}
+
+.button-area .button {
+  display: inline-block;
+  padding: 10px;
+  margin: 30px 5px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+.button-area .button:hover {
+  background-color: rgba(255, 255, 255, 0.32);
+}
+.button-area .button.active {
+  background-color: rgba(255, 255, 255, 0.52);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6) inset;
+}
+.button-area input[type=checkbox] {
+  display: none;
+}
+
+
+    </style>
+
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/masonry/3.1.5/masonry.pkgd.min.js"></script>
+    <script src="https://cdn.rawgit.com/digistate/resouces/master/multipleFilterMasonry.js"></script>
+    <script>
+
+
+
+// Load is used to ensure all images have been loaded, impossible with document
+
+jQuery(window).load(function () {
+
+    // Takes the gutter width from the bottom margin of .post
+    var container = jQuery('#posts');
+    // Creates an instance of Masonry on #posts
+    container.masonry({
+        // gutter: gutter,
+        itemSelector: '.post',
+        columnWidth: '.post',
+        filtersGroupSelector:".filters"
+
+    });
+
+// After the page is loaded
+ $params = {
+      itemSelector: ".post",
+      filtersGroupSelector:".filters"
+    // Uncomment below to set the selectorType to use <ul> instead of inputs
+    // selectorType: "list"
+    };
+
+$loadingMessage = $("#loading_msg");
+$filterButton = $(".button");
+
+  // Do mansonry with filtering
+  container.multipleFilterMasonry($params);
+  // Show articles with fadein
+  container.find(".post").animate({
+      "opacity":1
+    }, 1200);
+  // Hide loading message
+  $loadingMessage.fadeOut();
+
+  // Change the filtering button(label) status
+  $filterButton.find("input").change(function(){
+    $(this).parent().toggleClass("active");
+  });
+
+});
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+
+
+    <!-- <div id="grid" class="container"> -->
+    <div class="container" id="grid">
+
+        <div class="button-area filters">
+        <label class="button">
+        <input type="checkbox" value="group1" />Group 1
+        </label>
+        <label class="button">
+        <input type="checkbox" value="group2" />Group 2
+        </label>
+        <label class="button">
+        <input type="checkbox" value="group3" />Group 3
+        </label>
+        <label class="button">
+        <input type="checkbox" value="group4" />Group 4
+        </label>
+        </div>
+        <div id="posts" class="row">
+            <div class="post col-md-8 group2">
+                <img src="http://placehold.it/600x400"><br>
+                <br>
+                <strong>Title Goes Here</strong><br>
+                <small>Category</small>
+            </div>
+            <div class="post col-md-4 group2">
+                <img src="http://placehold.it/400x600"><br>
+                <br>
+                <strong>Title Goes Here</strong><br>
+                <small>Category</small>
+            </div>
+            <div class="post col-md-4 group1">
+                <img src="http://placehold.it/600x400"><br>
+                <br>
+                <strong>Title Goes Here</strong><br>
+                <small>Category</small>
+            </div>
+            <div class="post col-md-4 group2">
+                <img src="http://placehold.it/400x600"><br>
+                <br>
+                <strong>Title Goes Here</strong><br>
+                <small>Category</small>
+            </div>
+            <div class="post col-md-4 group3">
+                <img src="http://placehold.it/400x600"><br>
+                <br>
+                <strong>Title Goes Here</strong><br>
+                <small>Category</small>
+            </div>
+            <div class="post col-md-4 group4">
+                <img src="http://placehold.it/600x400"><br>
+                <br>
+                <strong>Title Goes Here</strong><br>
+                <small>Category</small>
+            </div>
+            <div class="post col-md-4 group2">
+                <img src="http://placehold.it/400x600"><br>
+                <br>
+                <strong>Title Goes Here</strong><br>
+                <small>Category</small>
+            </div>
+            <div class="post col-md-4 group2">
+                <img src="http://placehold.it/600x400"><br>
+                <br>
+                <strong>Title Goes Here</strong><br>
+                <small>Category</small>
+            </div>
+            <div class="post col-md-4 group1">
+                <img src="http://placehold.it/400x600"><br>
+                <br>
+                <strong>Title Goes Here</strong><br>
+                <small>Category</small>
+            </div>
+            <div class="post col-md-4 group1">
+                <img src="http://placehold.it/600x400"><br>
+                <br>
+                <strong>Title Goes Here</strong><br>
+                <small>Category</small>
+            </div>
+            <div class="post col-md-4 group1">
+                <img src="http://placehold.it/400x600"><br>
+                <br>
+                <strong>Title Goes Here</strong><br>
+                <small>Category</small>
+            </div>
+        </div>
+        <div id="loading_msg">Loading...</div>
+    </div>
+</body>
+</html>
